@@ -1,0 +1,16 @@
+{% extends 'shared/_base.html' %}
+
+{% block page_title %}
+Blog List
+{% endblock %}
+
+{% block page_content %}
+<h1>Hello from Blog List!</h1>
+<ul>
+    {% if posts %}
+    {% for p in posts %}
+    <li><a href="{% url 'blog_detail' blog_id=p.id %}">{{ p.title }}</a></li>
+    {% endfor %}
+    {% endif %}
+</ul>
+{% endblock %}

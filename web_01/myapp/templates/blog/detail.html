@@ -1,0 +1,16 @@
+{% extends 'shared/_base.html' %}
+{% block page_title %}
+Blog Detail
+{% endblock %}
+
+{% block page_content %}
+{% if id %}
+<h2>{{ title }}</h2>
+<p>{{ body }}</p>
+<ul>
+    {% for t in tags %}
+    <li>{{ t }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}
